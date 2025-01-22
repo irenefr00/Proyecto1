@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.frases_deslizantes {
+  list-style-type: none;
+  text-align: center;
+  background-color: rgb(65, 65, 194);
+  color: aliceblue;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+  width: 100%;
+  height: 45px;
+  overflow: hidden;
+  position: relative;
+  padding: 15px;
+  min-width: 320px;
+}
+.frase {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  animation: mostrar 9s infinite;
+}
+.frase:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.frase:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.frase:nth-child(3) {
+  animation-delay: 6s;
+}
+
+@keyframes mostrar {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 0;
+  }
+}
+
+.primer-nav {
+  background-color: rgb(21, 21, 128);
+  display: flex;
+  flex-wrap: wrap;
+}
+.navegacion {
+  margin-left: 200px;
+}
+.logo {
+  width: 150px;
+  height: 80px;
+  margin-left: 10px;
+}
+.search-container {
+  margin-top: 20px;
+}
+.search-container > input {
+  font-size: 20px;
+  border-radius: 20px;
+  width: 300px;
+  height: 40px;
+  border-color: white;
+  padding-left: 30px;
+  margin-left: 150px;
+}
+input::placeholder {
+  color: rgb(21, 21, 128);
+  font-weight: bolder;
+}
+
+.navegacion {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  justify-content: flex-end;
+  margin-top: 19px;
+  margin-right: 20px;
+}
+.navegacion > li {
+  color: white;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bolder;
+}
+.navegacion a {
+  color: #f1e7e7;
+  text-decoration: none;
+}
+
+.navegacion a:active {
+  color: #f1e7e7;
+}
+
+.segundo-nav {
+  display: flex;
+  list-style: none;
+  gap: 45px;
+  justify-content: center;
+  background-color: white;
+}
+.segundo-nav li {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bolder;
+  color: rgb(65, 65, 194);
+  margin-bottom: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.segundo-nav li:hover {
+  color: orange;
+}
+.image-slider {
+  margin-top: 140px;
+  width: 1348px;
+  overflow: hidden;
+}
+.slider {
+  display: flex;
+  animation: slide 6s infinite ease-in-out;
+}
+.slider img {
+  width: 100%;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  35% {
+    transform: translateX(0%);
+  }
+  55% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.jugueteria h2 {
+  color: rgb(21, 21, 128);
+  margin-top: 60px;
+  font-size: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.jugueteria p {
+  text-align: center;
+  font-size: 13px;
+  color: gray;
+  width: 70%;
+  margin-left: 200px;
+  line-height: 18px;
+}
+.vendidos h2 {
+  text-align: center;
+  margin-top: 60px;
+  color: rgb(21, 21, 128);
+  font-size: 30px;
+}
+
+.vendidos img {
+  max-width: 250px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.productos p {
+  color: rgb(33, 33, 131);
+  font-size: 30x;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  text-align: center;
+}
+.productos span {
+  font-weight: bolder;
+  color: rgb(33, 33, 131);
+  font-size: 20px;
+  text-align: center;
+  padding: 60px;
+}
+.contenedor-product {
+  display: flex;
+  margin-top: 20px;
+  padding: 129px;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.productos {
+  box-shadow: 10px 10px 20px rgba(129, 111, 207, 0.3);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 250px;
+}
+.productos a {
+  text-decoration: none;
+}
+.superbanner img {
+  width: 1348px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.collage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.collage img {
+  border-radius: 10px;
+  width: 400px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  min-width: 200px;
+}
+footer {
+  background-color: rgb(21, 21, 128);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+
+  justify-content: space-evenly;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+footer li {
+  list-style-type: none;
+  text-align: center;
+
+  color: white;
+  line-height: 25px;
+}
+footer li:first-child {
+  font-weight: bolder;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+footer li:not(:first-child):hover {
+  cursor: pointer;
+  color: orange;
+}
+.dibujos {
+  width: 30px;
+  margin-bottom: 5px;
+  display: flex;
+  cursor: pointer;
+}
+.navegacion-fija {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+}
+@media (max-width: 1079px) {
+  .superbanner img {
+    width: 90%;
+    max-width: 1500px;
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navegacion {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .search-container > input {
+    width: 100%;
+    margin-left: 0;
+    font-size: 20px;
+    padding: 10px 80px;
+    margin-right: 10px;
+  }
+
+  .navegar {
+    display: none;
+  }
+  .slider img {
+    opacity: 0;
+  }
+  .contenedor-product {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .productos {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .segundo-nav {
+    display: none;
+  }
+
+  footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  footer li {
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+  .image-slider {
+    display: none;
+  }
+  .jugueteria h2 {
+    margin-top: 100px;
+  }
+  .jugueteria p {
+    margin-top: 10px;
+  }
+  .superbanner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .superbanner img {
+    width: 80%;
+    height: auto;
+    max-width: 300px;
+  }
+}
+@media (max-width: 390px) {
+  .navegacion-fija {
+    max-width: 375px;
+  }
+  .frases_deslizantes {
+    width: 100%;
+    font-size: 8px;
+  }
+  .search-container {
+    display: flex;
+    height: auto;
+  }
+  .navegacion-fija {
+    width: 100%;
+  }
+  .jugueteria {
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .jugueteria h2 {
+    margin-left: 200px;
+    margin-top: 300px;
+    font-size: 20px;
+  }
+  .vendidos h2 {
+    font-size: 20px;
+  }
+  .contenedor-product {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+  }
+  .productos {
+    width: 100%;
+    max-width: 180px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .productos img {
+    width: 100%;
+    height: auto;
+    max-width: 180px;
+  }
+}
