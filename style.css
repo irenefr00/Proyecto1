@@ -16,10 +16,19 @@ body {
   font-weight: bold;
   width: 100%;
   height: 45px;
-  overflow: hidden;
+  line-height: 45px;
+  margin-top: 110px;
   position: relative;
-  padding: 15px;
-  min-width: 320px;
+}
+.navegacion-fija {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 110px;
+  background-color: rgb(21, 21, 128);
+  transition: top 0.3 ease;
 }
 .frase {
   position: absolute;
@@ -125,7 +134,7 @@ input::placeholder {
   color: orange;
 }
 .image-slider {
-  margin-top: 140px;
+  margin-top: 30px;
   width: 1348px;
   overflow: hidden;
 }
@@ -173,7 +182,7 @@ input::placeholder {
 }
 
 .vendidos img {
-  max-width: 250px;
+  max-width: 300px;
   display: flex;
   justify-content: center;
   padding: 20px;
@@ -181,7 +190,7 @@ input::placeholder {
 .productos p {
   color: rgb(33, 33, 131);
   font-size: 30x;
-  padding-bottom: 50px;
+  padding-bottom: 25px;
   padding-top: 20px;
   text-align: center;
 }
@@ -202,8 +211,6 @@ input::placeholder {
   overflow: hidden;
 }
 .productos {
-  box-shadow: 10px 10px 20px rgba(129, 111, 207, 0.3);
-  border-radius: 10px;
   width: 100%;
   max-width: 250px;
 }
@@ -261,16 +268,18 @@ footer li:not(:first-child):hover {
   display: flex;
   cursor: pointer;
 }
-.navegacion-fija {
-  position: fixed;
-  z-index: 1000;
-  width: 100%;
-}
+
 @media (max-width: 1079px) {
   .superbanner img {
     width: 90%;
     max-width: 1500px;
     margin-left: 30px;
+  }
+  .image-slider {
+    margin-top: 20px;
+  }
+  .frases_deslizantes {
+    margin-top: 200px;
   }
 }
 
@@ -281,7 +290,9 @@ footer li:not(:first-child):hover {
     margin-left: 0;
     margin-right: 0;
   }
-
+  .frases_deslizantes {
+    margin-top: 100px;
+  }
   .search-container > input {
     width: 100%;
     margin-left: 0;
@@ -339,7 +350,7 @@ footer li:not(:first-child):hover {
   .superbanner img {
     width: 80%;
     height: auto;
-    max-width: 300px;
+    max-width: 1200px;
   }
 }
 @media (max-width: 390px) {
@@ -349,6 +360,7 @@ footer li:not(:first-child):hover {
   .frases_deslizantes {
     width: 100%;
     font-size: 8px;
+    margin-top: 150px;
   }
   .search-container {
     display: flex;
